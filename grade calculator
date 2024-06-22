@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class gradecalculator {
+    public static void main(String[] args) {
+        Scanner myObj = new Scanner(System.in);
+        String name, grade;
+        int roll_no, Maths, French, English, Science, Social;
+        int n = 5;
+
+        System.out.println("Enter your Name");
+        name = myObj.nextLine();
+        System.out.println("Enter your Roll number");
+        roll_no = myObj.nextInt();
+        System.out.println("Enter your Maths mark");
+        Maths = myObj.nextInt();
+        System.out.println("Enter your French mark");
+        French = myObj.nextInt();
+        System.out.println("Enter your English mark");
+        English = myObj.nextInt();
+        System.out.println("Enter your Science mark");
+        Science = myObj.nextInt();
+        System.out.println("Enter your Social mark");
+        Social = myObj.nextInt();
+        int total = Maths + French + English + Science + Social;
+        System.out.println("your Total Mark out of 500 is : " + total);
+        int average_percentage = total / n;
+        System.out.println("your Average Percentage is : " + average_percentage);
+
+        if (average_percentage >= 95) {
+            System.out.println("Enter your Grade is 'O' ");
+        } else if (average_percentage >= 90) {
+            System.out.println("Enter your Grade is 'A' ");
+        } else if (average_percentage >= 80) {
+            System.out.println("Enter your Grade is 'B' ");
+        } else if (average_percentage >= 70) {
+            System.out.println("Enter your Grade is 'C' ");
+        } else if (average_percentage >= 60) {
+            System.out.println("Enter your Grade is 'D' ");
+        } else if (average_percentage >= 50) {
+            System.out.println("Enter your Grade is 'E' ");
+
+        } else {
+            System.out.println("YOUR ARE FAIL");
+        }
+
+
+    }
+}
